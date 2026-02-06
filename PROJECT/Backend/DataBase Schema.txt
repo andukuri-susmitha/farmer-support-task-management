@@ -1,0 +1,25 @@
+Database Schema
+
+This application uses a MongoDB database to store user and task information.
+
+Users Collection
+
+| Field Name | Data Type | Description |
+|----------|----------|------------|
+| _id | ObjectId | Unique user identifier |
+| email | String | User email address |
+| password | String | Encrypted password |
+| role | String | User role (Farmer / Admin) |
+| createdAt | Date | Account creation time |
+
+
+Tasks Collection
+
+| Field Name | Data Type | Description |
+|----------|----------|------------|
+| _id | ObjectId | Unique task identifier |
+| title | String | Task title |
+| description | String | Task details |
+| status | String | Open / In Progress / Resolved |
+| createdBy | ObjectId | Reference to Users collection |
+| createdAt | Date | Task creation time |
